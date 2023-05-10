@@ -149,10 +149,37 @@
     
 
     </div>
-    <br> <input id="nakpoga" class="button-54" type="button" value="Tālāk" disabled="true" onclick="novirze()"/>
+    <br> <input id="nakpoga" class="button-54" type="button" value="Tālāk" onclick="novirze()"/>
     <p id="amogus"></p>
 
     <script>
+
+      function novirze() {
+
+        amogus = document.getElementById("amogus").innerHTML
+        //Verify the TextBox value.
+        if (amogus != null) {
+            
+      document.getElementById("amogus").innerHTML = document.getElementById("amogus").innerHTML + "<br>" + "c" + krasalink;
+      location.href='kop.html'
+
+    };
+
+    function EnableDisable() {
+        //Reference the Button.
+        
+        amogus = document.getElementById("amogus").innerHTML
+        //Verify the TextBox value.
+        if (amogus == null) {
+            //Enable the TextBox when TextBox has value.
+            document.getElementById("nakpoga").disabled = true;
+        } else {
+            //Disable the TextBox when TextBox is empty.
+            nakpoga.disabled = false;
+        }
+    };
+    
+
       var drebe = sessionStorage.getItem("drebeOnline");//atgust drebes kategoriju no ipriekseja page
       var krasa = "1"
     
@@ -166,7 +193,6 @@
         else {
           document.getElementById("amogus").innerHTML = krasa + "s + " + drebe; 
         }
-        EnableDisable()
       }
 
       function zilaKrasa() {
@@ -178,7 +204,6 @@
         else {
           document.getElementById("amogus").innerHTML = krasa + "s + " + drebe; 
         }
-        EnableDisable()
       }
 
       function baltaKrasa() {
@@ -190,7 +215,6 @@
         else {
           document.getElementById("amogus").innerHTML = krasa + "s + " + drebe; 
         }
-        EnableDisable()
       }
 
       function melnaKrasa() {
@@ -202,7 +226,6 @@
         else {
           document.getElementById("amogus").innerHTML = krasa + "s + " + drebe; 
         }
-        EnableDisable()
       }
 
       function rozaKrasa() {
@@ -214,7 +237,6 @@
         else {
           document.getElementById("amogus").innerHTML = krasa + "s + " + drebe; 
         }
-        EnableDisable()
       }
 
       function adasKrasa() {
@@ -226,7 +248,6 @@
         else {
           document.getElementById("amogus").innerHTML = krasa + "s + " + drebe; 
         }
-        EnableDisable()
       }
 
       function pelekaKrasa() {
@@ -238,7 +259,6 @@
         else {
           document.getElementById("amogus").innerHTML = krasa + "s + " + drebe; 
         }
-        EnableDisable()
       }
 
       function brunaKrasa() {
@@ -250,29 +270,9 @@
         else {
           document.getElementById("amogus").innerHTML = krasa + "s + " + drebe; 
         }
-        EnableDisable()
       }
 
-      function EnableDisable() {
-        //Reference the Button.
-        
-        amogus = document.getElementById("amogus").innerHTML
-        //Verify the TextBox value.
-        if (amogus == null) {
-            //Enable the TextBox when TextBox has value.
-            document.getElementById("nakpoga").disabled = true;
-        } else {
-            //Disable the TextBox when TextBox is empty.
-            nakpoga.disabled = false;
-        }
-    };
       
-    function novirze() {
-      krasalink = krasaOnline.replace(/\s/g, '');
-      document.getElementById("amogus").innerHTML = document.getElementById("amogus").innerHTML + "<br>" + "c" + krasalink;
-
-    }
-    
     </script>
   </body>
 </html>
