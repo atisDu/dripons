@@ -161,7 +161,7 @@
         if (amogus != null) {
             
       document.getElementById("amogus").innerHTML = document.getElementById("amogus").innerHTML + "<br>" + "c" + krasalink;
-      location.href='kop.html';
+      window.location.href = "kop.html";
         }
     };
 
@@ -270,6 +270,13 @@
         else {
           document.getElementById("amogus").innerHTML = krasa + "s + " + drebe; 
         }
+      }
+      function pogatalak() {
+        drebe = "dzemperis";
+        sessionStorage.setItem("drebeOnline", "džemperis"); 
+        document.getElementById("selected").innerHTML = drebe;
+
+        location.href='dzemperis.html';
       }
 
       
