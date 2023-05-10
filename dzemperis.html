@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <title>dzemperis</title>
+    <style>
+      #virsraksts {font-size: 52px;}
+      .poga {
+        width: 150px;
+        height: 150px;
+        background-size: cover;
+        background-position: center;
+        margin: 10px;
+        border-radius: 16px;
+        cursor: pointer;
+        opacity: 0.75;
+        transition: 0.4s;
+        border: none;
+      }
+
+#amogus {
+      color:#242121;
+
+}
+.button-54 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
+      
+      
+
+      .poga:hover {
+        font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #41454b;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  transform: scale(1.1);
+  
+
+        opacity: 1
+      }
+
+      .sarkana:hover {
+      background-color: #ff0000;
+      }
+      .zila:hover {
+      background-color: #1100ff;}
+      .balta:hover {
+      background-color: #ffffff;}
+      .melna:hover {
+      background-color: #000000;}
+      .roza:hover {
+      background-color: #ff00ff;}
+      .adas:hover {
+      background-color: #e4bb94;}
+      .peleka:hover {
+      background-color: #5f5f5f;}
+      .bruna:hover {
+      background-color: #693001;}
+
+
+      .sarkana {background-color: #ff0000;}
+      .zila {background-color: #1100ff;}
+      .balta {background-color: #ffffff;}
+      .melna {background-color: #000000;
+        opacity: 0.85;}
+      .roza{background-color: #ff00ff;}
+      .adas{background-color: #e4bb94;}
+      .peleka{background-color: #5f5f5f;}
+      .bruna{background-color: #693001;}
+
+
+      .pogas {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif; color: #554640;}
+      
+      body {
+        background-image: url("background.jpg");
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+         align-items: center;
+         height: 100vh;
+         width: 100vw;
+          margin: 0;
+         background: #CDE6F5;
+      }
+
+    </style>
+  </head>
+  <body>
+    
+    <nav>
+      <div class="picture-block" style="background-image: url('https://cdn-icons-png.flaticon.com/512/93/93634.png');" onclick="location.href='./main.html'">
+        <br> </div>
+ 
+    </nav>
+
+    <h1 id="virsraksts">Kādu krāsu tu vilksi?</h1>
+    <div class="pogas">
+      <button class="poga sarkana" onclick="sarkanaKrasa()">
+      <br> </button>
+      <button class="poga zila" onclick="zilaKrasa()">
+      <br> </button>
+      <button class="poga balta" onclick="baltaKrasa()">
+      <br> </button>
+      <button class="poga melna" onclick="melnaKrasa()">
+      <br> </button>
+      <button class="poga roza" onclick="rozaKrasa()">
+      <br> </button>
+      <button class="poga adas" onclick="adasKrasa()">
+      <br> </button>
+      <button class="poga peleka" onclick="pelekaKrasa()">
+      <br> </button>
+      <button class="poga bruna" onclick="brunaKrasa()">
+      <br> </button> 
+    
+
+    </div>
+    <br> <input id="nakpoga" class="button-54" type="button" value="Tālāk" disabled="true" onclick="novirze()"/>
+    <p id="amogus"></p>
+
+    <script>
+      var drebe = sessionStorage.getItem("drebeOnline");//atgust drebes kategoriju no ipriekseja page
+      var krasa = "1"
+    
+      function sarkanaKrasa() {
+      
+      krasa = "sarkan";
+      sessionStorage.setItemA
+      if (drebe == "žakete") {
+        document.getElementById("amogus").innerHTML = krasa + "ā + " + drebe;
+        }
+        else {
+          document.getElementById("amogus").innerHTML = krasa + "s + " + drebe; 
+        }
+        EnableDisable()
+      }
+
+      function zilaKrasa() {
+      krasa = "zil";
+      sessionStorage.setItem("krasaOnline", "zil");
+      if (drebe == "žakete") {
+        document.getElementById("amogus").innerHTML = krasa + "ā + " + drebe;
+        }
+        else {
+          document.getElementById("amogus").innerHTML = krasa + "s + " + drebe; 
+        }
+        EnableDisable()
+      }
+
+      function baltaKrasa() {
+      krasa = "balt";
+      sessionStorage.setItem("krasaOnline", "balt");
+      if (drebe == "žakete") {
+        document.getElementById("amogus").innerHTML = krasa + "ā + " + drebe;
+        }
+        else {
+          document.getElementById("amogus").innerHTML = krasa + "s + " + drebe; 
+        }
+        EnableDisable()
+      }
+
+      function melnaKrasa() {
+      krasa = "meln";
+      sessionStorage.setItem("krasaOnline", "meln");
+      if (drebe == "žakete") {
+        document.getElementById("amogus").innerHTML = krasa + "ā + " + drebe;
+        }
+        else {
+          document.getElementById("amogus").innerHTML = krasa + "s + " + drebe; 
+        }
+        EnableDisable()
+      }
+
+      function rozaKrasa() {
+      krasa = "roz";
+      sessionStorage.setItem("krasaOnline", "roz");
+      if (drebe == "žakete") {
+        document.getElementById("amogus").innerHTML = krasa + "ā + " + drebe;
+        }
+        else {
+          document.getElementById("amogus").innerHTML = krasa + "s + " + drebe; 
+        }
+        EnableDisable()
+      }
+
+      function adasKrasa() {
+      krasa = "viegli brūn";
+      sessionStorage.setItem("krasaOnline", "viegli brūn");
+      if (drebe == "žakete") {
+        document.getElementById("amogus").innerHTML = krasa + "ā + " + drebe;
+        }
+        else {
+          document.getElementById("amogus").innerHTML = krasa + "s + " + drebe; 
+        }
+        EnableDisable()
+      }
+
+      function pelekaKrasa() {
+      krasa = "pelek";
+      sessionStorage.setItem("krasaOnline", "pelēk");
+      if (drebe == "žakete") {
+        document.getElementById("amogus").innerHTML = krasa + "ā + " + drebe;
+        }
+        else {
+          document.getElementById("amogus").innerHTML = krasa + "s + " + drebe; 
+        }
+        EnableDisable()
+      }
+
+      function brunaKrasa() {
+      krasa = "brun";
+      sessionStorage.setItem("krasaOnline", "brūn");
+       if (drebe == "žakete") {
+        document.getElementById("amogus").innerHTML = krasa + "ā + " + drebe;
+        }
+        else {
+          document.getElementById("amogus").innerHTML = krasa + "s + " + drebe; 
+        }
+        EnableDisable()
+      }
+
+      function EnableDisable() {
+        //Reference the Button.
+        
+        amogus = document.getElementById("amogus").innerHTML
+        //Verify the TextBox value.
+        if (amogus == null) {
+            //Enable the TextBox when TextBox has value.
+            document.getElementById("nakpoga").disabled = true;
+        } else {
+            //Disable the TextBox when TextBox is empty.
+            nakpoga.disabled = false;
+        }
+    };
+      
+    function novirze() {
+      krasalink = krasaOnline.replace(/\s/g, '');
+      document.getElementById("amogus").innerHTML = document.getElementById("amogus").innerHTML + "<br>" + "c" + krasalink;
+
+    }
+    
+    </script>
+  </body>
+</html>
