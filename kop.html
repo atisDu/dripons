@@ -120,17 +120,12 @@ body {
 </div>
 <script>
 /* Atkarībā no izlases 
-
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 Formāts: 
 "krasa" bez pēdējā burta kopā ar "drebe"
 piemēram brūnžakete.html
 
-*/
-/*
-window.onload = function ierakstu_ievilksana(saite) {
-  document.getElementById("card1") = saite + ".html";
-};
-
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
 */
 
 function includeHTML(krasa, drebe) {
@@ -141,15 +136,23 @@ function includeHTML(krasa, drebe) {
       document.getElementById("row").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", saite + ".html", true);
+  xhttp.open("GET", "atlase/" + saite + ".html", true);
   xhttp.send();
-  document.getElementById("stils").innerHTML = saite;
 }
-var drebe = sessionStorage.getItem("drebeOnline");
+
 var krasa = sessionStorage.getItem("krasaOnline");
+var drebe = sessionStorage.getItem("drebeOnline");
 
 includeHTML(krasa, drebe);
 
+/* Atkarībā no izlases 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Formāts: 
+"krasa" bez pēdējā burta kopā ar "drebe"
+piemēram brūnžakete.html
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+*/
 
 
 if (drebe == "žakete") {
